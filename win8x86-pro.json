@@ -67,6 +67,18 @@
         [
           "modifyvm",
           "{{.Name}}",
+          "--nic2",
+          "bridged"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--bridgeadapter2",
+          "Intel(R) 82583V Gigabit Network Connection"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
           "--cpus",
           "1"
         ]

@@ -74,6 +74,18 @@
           "1"
         ],
         [
+		  "modifyvm",
+		  "{{.Name}}",
+		  "--nic2",
+		  "bridged"
+		],
+		[
+		  "modifyvm",
+		  "{{.Name}}",
+		  "--bridgeadapter2",
+		  "Intel(R) 82583V Gigabit Network Connection"
+		],
+        [
           "setextradata",
           "{{.Name}}",
           "VBoxInternal/CPUM/CMPXCHG16B",
