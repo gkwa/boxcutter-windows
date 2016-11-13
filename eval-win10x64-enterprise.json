@@ -67,7 +67,7 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "1536"
+          "2536"
         ],
         [
           "modifyvm",
@@ -85,7 +85,7 @@
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "1"
+          "2"
         ],
         [
           "setextradata",
