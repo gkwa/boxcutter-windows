@@ -1,13 +1,36 @@
-Measure-Command { make virtualbox/eval-win7x64-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win7x64-enterprise" taylor }
-Exit
-Measure-Command { make virtualbox/eval-win10x64-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win10x64-enterprise" taylor }
-Measure-Command { make virtualbox/eval-win10x86-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win10x86-enterprise" taylor }
-Measure-Command { make virtualbox/eval-win2008r2-datacenter | out-default; email --blank-mail --subject "Packer is done with eval-win2008r2-datacenter" taylor }
-Measure-Command { make virtualbox/eval-win2008r2-standard | out-default; email --blank-mail --subject "Packer is done with eval-win2008r2-standard" taylor }
-Measure-Command { make virtualbox/eval-win2012-standard | out-default; email --blank-mail --subject "Packer is done with eval-win2012-standard" taylor }
-Measure-Command { make virtualbox/eval-win2012r2-datacenter | out-default; email --blank-mail --subject "Packer is done with eval-win2012r2-datacenter" taylor }
-Measure-Command { make virtualbox/eval-win2012r2-standard | out-default; email --blank-mail --subject "Packer is done with eval-win2012r2-standard" taylor }
-Measure-Command { make virtualbox/eval-win7x86-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win7x86-enterprise" taylor }
-Measure-Command { make virtualbox/eval-win81x64-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win81x64-enterprise" taylor }
-Measure-Command { make virtualbox/eval-win81x86-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win81x86-enterprise" taylor }
-Measure-Command { make virtualbox/eval-win8x64-enterprise | out-default; email --blank-mail --subject "Packer is done with eval-win8x64-enterprise" taylor }
+$ErrorActionPreference = 'SilentlyContinue'
+
+function doit($vm)
+{
+	if(2 -ne $vm.Split("/").Count) # expect format provider/vmname
+	{
+		continue
+	}
+	
+	$done = "." + $vm.replace("/","-") 
+	if(test-path $done) # file .provider-vmname already exists
+	{
+		continue
+	}
+
+	$time = Measure-Command {
+		make $vm | out-default
+	}
+	email --blank-mail --subject "Packer is done with $vm" taylor
+	$null >$done
+}
+
+# main
+$todo_list = "vmlist.txt"
+
+if(!test-patth $todo_list)
+{
+	Write-Host "Can't find $todo_list, quitting"
+	Exit
+}
+
+$vms = (Get-Content -Path $todo_list | Where {$_ -notmatch '^#.*'} | foreach{ $_.Trim() })
+foreach($vm in $vms)
+{
+	doit $vm
+}
