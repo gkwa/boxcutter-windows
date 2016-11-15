@@ -6,6 +6,9 @@ echo on
 
 title Installing wget. Please wait...
 
+echo temp sanity check
+ipconfig /all
+
 if not defined WGET_URL set WGET_URL=https://eternallybored.org/misc/wget/current/wget.exe
 
 for %%i in ("%WGET_URL%") do set filename=%SystemRoot%\%%~nxi
