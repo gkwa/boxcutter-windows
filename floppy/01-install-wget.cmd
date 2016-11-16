@@ -12,7 +12,7 @@ ipconfig /all
 ping 10.0.3.94
 ping google.com
 
-if not defined WGET_URL set WGET_URL=https://eternallybored.org/misc/wget/current/wget.exe
+if not defined WGET_URL set WGET_URL=http://eternallybored.org/misc/wget/current/wget.exe
 
 for %%i in ("%WGET_URL%") do set filename=%SystemRoot%\%%~nxi
 
