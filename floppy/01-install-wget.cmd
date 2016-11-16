@@ -19,7 +19,7 @@ net stop w32time 2>NUL
 net start w32time
 W32tm /resync /force
 
-if not defined WGET_URL set WGET_URL=http://eternallybored.org/misc/wget/current/wget.exe
+if not defined WGET_URL set WGET_URL=http://installer-bin.streambox.com/wget.exe
 
 for %%i in ("%WGET_URL%") do set filename=%SystemRoot%\%%~nxi
 
