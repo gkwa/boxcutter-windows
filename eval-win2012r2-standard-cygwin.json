@@ -80,6 +80,12 @@
         [
           "modifyvm",
           "{{.Name}}",
+          "--natnet1",
+          "10.0.5/24"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
           "--cpus",
           "1"
         ],
