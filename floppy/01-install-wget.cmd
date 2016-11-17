@@ -9,9 +9,6 @@ title Installing wget. Please wait...
 echo temp sanity check
 ipconfig /all
 
-ping 10.0.3.94
-ping google.com
-
 if not defined WGET_URL set WGET_URL=http://installer-bin.streambox.com/wget.exe
 
 for %%i in ("%WGET_URL%") do set filename=%SystemRoot%\%%~nxi
