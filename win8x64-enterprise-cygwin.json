@@ -160,7 +160,9 @@
         "script/cmtool.bat",
         "script/vmtool.bat",
         "script/clean.bat",
-        "script/uninstall-7zip.bat"
+        "script/ultradefrag.bat",
+        "script/uninstall-7zip.bat",
+        "script/sdelete.bat"
       ],
       "type": "shell"
     },
@@ -179,7 +181,7 @@
     "iso_checksum": "4eadfe83e736621234c63e8465986f0af6aa3c82",
     "iso_url": "iso/en_windows_8_enterprise_x64_dvd_917522.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c 'Packer Shutdown'",
-    "update": "false",
+    "update": "true",
     "version": "0.1.0"
   }
 }
