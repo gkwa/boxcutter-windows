@@ -161,7 +161,9 @@
         "script/vagrant.bat",
         "script/cmtool.bat",
         "script/vmtool.bat",
-        "script/clean.bat"
+        "script/clean.bat",
+        "script/ultradefrag.bat",
+        "script/sdelete.bat"
       ],
       "type": "windows-shell"
     }
