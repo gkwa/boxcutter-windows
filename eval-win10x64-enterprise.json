@@ -32,7 +32,7 @@
         "scsi0.virtualDev": "lsisas1068"
       },
       "winrm_password": "vagrant",
-      "winrm_timeout": "21601s",
+      "winrm_timeout": "28800s",
       "winrm_username": "vagrant"
     },
     {
@@ -94,7 +94,7 @@
       ],
       "vm_name": "eval-win10x64-enterprise",
       "winrm_password": "vagrant",
-      "winrm_timeout": "21600s",
+      "winrm_timeout": "28800s",
       "winrm_username": "vagrant"
     },
     {
@@ -137,7 +137,7 @@
       "type": "parallels-iso",
       "vm_name": "eval-win10x64-enterprise",
       "winrm_password": "vagrant",
-      "winrm_timeout": "21603s",
+      "winrm_timeout": "28800s",
       "winrm_username": "vagrant"
     }
   ],
