@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function test_delete_random
+{
+	ls box/*/*.box | shuf | head -1 | xargs -I% -r mv % %.1
+}
+
 function create_todo
 {
 	find box -iname *.box >donelist.txt
@@ -64,6 +69,7 @@ function main
 			email --blank-mail --subject "$subject" ${email:-taylor}
 			echo [`date`] pass $maketime $vm >>vmlist.log
 		fi
+		test_delete_random
 		create_todo
 		sleep 10
 	done
