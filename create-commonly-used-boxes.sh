@@ -52,7 +52,7 @@ function main
 		clear_old_vms $vm_wo_provider
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
-		make $vm 2>&1 | tee logs/$makelog
+		make SHUTDOWN_TIMEOUT="5M" PACKER_LOG=1 $vm 2>&1 | tee logs/$makelog
 		ps=${PIPESTATUS[0]} #http://stackoverflow.com/a/1221870/1495086 
 		T="$(($(date +%s)-T))"
 		maketime=$(printf "%02dh%02dm\n" "$((T/3600))" "$((T/60%60))")
