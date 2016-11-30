@@ -1,12 +1,3 @@
 # Example:
 # virtualbox/eval-win7x64-enterprise
-virtualbox/eval-win2008r2-datacenter
 virtualbox/eval-win2008r2-standard
-virtualbox/eval-win7x64-enterprise
-virtualbox/eval-win7x86-enterprise
-virtualbox/eval-win81x64-enterprise
-virtualbox/eval-win81x86-enterprise
-virtualbox/eval-win2012r2-datacenter
-virtualbox/eval-win2012r2-standard
-virtualbox/eval-win10x64-enterprise
-virtualbox/eval-win10x86-enterprise
