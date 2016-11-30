@@ -359,7 +359,7 @@ define BUILDBOX
 $(VIRTUALBOX_BOX_DIR)/$(1)$(BOX_SUFFIX): $(1).json
 	rm -rf $(VIRTUALBOX_OUTPUT)
 	mkdir -p $(VIRTUALBOX_BOX_DIR)
-	PACKER_LOG=1 $(PACKER) build -force -only=$(VIRTUALBOX_BUILDER) $(PACKER_VARS) -var "iso_url=$(2)" -var "iso_checksum=$(3)" $(1).json
+	PACKER_LOG=1 $(PACKER) build -on-error=abort -force -only=$(VIRTUALBOX_BUILDER) $(PACKER_VARS) -var "iso_url=$(2)" -var "iso_checksum=$(3)" $(1).json
 
 $(VMWARE_BOX_DIR)/$(1)$(BOX_SUFFIX): $(1).json
 	rm -rf $(VMWARE_OUTPUT)
