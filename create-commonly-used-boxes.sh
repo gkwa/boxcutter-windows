@@ -35,16 +35,19 @@ function clear_old_settings_file
 	logfile="$1"
 
 	vbf=".*Machine settings file '\(.*\)' already exists"
-	sed -n "s/$vbf/\1/p" $logfile |
-		sort -u | sed 's,\\,/,g' |
-		while read path
-		do
-			rm $path
-		done
+	{
+		sed -n "s/$vbf/\1/p" $logfile |
+			sort -u | sed 's,\\,/,g' |
+			while read path
+			do
+				echo rm $path
+			done
+	} | bash
 }
 
 function main
 {
+	mkdir -p logs
 	create_todo
 	for vm in `cat todolist.txt|grep -v ^\#`
 	do
@@ -52,7 +55,7 @@ function main
 		clear_old_vms $vm_wo_provider
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
-		make $vm 2>&1 | tee logs/$makelog
+		make $vm 2>&1 | tee $makelog
 		ps=${PIPESTATUS[0]} #http://stackoverflow.com/a/1221870/1495086 
 		T="$(($(date +%s)-T))"
 		maketime=$(printf "%02dh%02dm\n" "$((T/3600))" "$((T/60%60))")
