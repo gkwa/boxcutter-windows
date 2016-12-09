@@ -87,12 +87,20 @@
           "{{.Name}}",
           "--cpus",
           "1"
+        ],
+        [
+          "setextradata",
+          "{{.Name}}",
+          "GUI/SuppressMessages",
+          "all"
         ]
       ],
       "vm_name": "eval-win7x64-enterprise",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
-      "winrm_username": "vagrant"
+      "winrm_username": "vagrant",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "communicator": "winrm",

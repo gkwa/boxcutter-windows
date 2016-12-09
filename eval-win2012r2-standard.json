@@ -90,12 +90,20 @@
           "{{.Name}}",
           "VBoxInternal/CPUM/CMPXCHG16B",
           "1"
+        ],
+        [
+          "setextradata",
+          "{{.Name}}",
+          "GUI/SuppressMessages",
+          "all"
         ]
       ],
       "vm_name": "eval-win2012r2-standard",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
-      "winrm_username": "vagrant"
+      "winrm_username": "vagrant",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "communicator": "winrm",

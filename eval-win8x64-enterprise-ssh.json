@@ -86,9 +86,17 @@
           "{{.Name}}",
           "--cpus",
           "1"
+        ],
+        [
+          "setextradata",
+          "{{.Name}}",
+          "GUI/SuppressMessages",
+          "all"
         ]
       ],
-      "vm_name": "eval-win8x64-enterprise-ssh"
+      "vm_name": "eval-win8x64-enterprise-ssh",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",
