@@ -86,17 +86,9 @@
           "{{.Name}}",
           "--cpus",
           "1"
-        ],
-        [
-          "setextradata",
-          "{{.Name}}",
-          "GUI/SuppressMessages",
-          "all"
         ]
       ],
-      "vm_name": "win2008r2-web-cygwin",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "win2008r2-web-cygwin"
     },
     {
       "disk_size": "{{user `disk_size`}}",

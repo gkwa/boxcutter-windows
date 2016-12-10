@@ -81,20 +81,12 @@
           "{{.Name}}",
           "--cpus",
           "1"
-        ],
-        [
-          "setextradata",
-          "{{.Name}}",
-          "GUI/SuppressMessages",
-          "all"
         ]
       ],
       "vm_name": "win8x86-pro",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
-      "winrm_username": "vagrant",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "winrm_username": "vagrant"
     },
     {
       "communicator": "winrm",
