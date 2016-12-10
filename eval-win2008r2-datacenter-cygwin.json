@@ -88,7 +88,9 @@
           "1"
         ]
       ],
-      "vm_name": "eval-win2008r2-datacenter-cygwin"
+      "vm_name": "eval-win2008r2-datacenter-cygwin",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",

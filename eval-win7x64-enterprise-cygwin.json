@@ -92,7 +92,9 @@
           "1"
         ]
       ],
-      "vm_name": "eval-win7x64-enterprise-cygwin"
+      "vm_name": "eval-win7x64-enterprise-cygwin",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",
