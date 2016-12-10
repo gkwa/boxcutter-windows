@@ -91,7 +91,9 @@
           "1"
         ]
       ],
-      "vm_name": "win2012r2-datacenter-ssh"
+      "vm_name": "win2012r2-datacenter-ssh",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",

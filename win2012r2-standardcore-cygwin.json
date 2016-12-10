@@ -93,7 +93,9 @@
           "1"
         ]
       ],
-      "vm_name": "win2012r2-standardcore-cygwin"
+      "vm_name": "win2012r2-standardcore-cygwin",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",

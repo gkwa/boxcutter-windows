@@ -95,7 +95,9 @@
           "1"
         ]
       ],
-      "vm_name": "eval-win81x86-enterprise-cygwin"
+      "vm_name": "eval-win81x86-enterprise-cygwin",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",
