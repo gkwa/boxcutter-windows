@@ -25,20 +25,6 @@ for ($i = 0; $i < count($data['builders']); $i++) {
     if ($data['builders'][$i]['type'] == 'virtualbox-iso') {
         $data['builders'][$i]['post_shutdown_delay'] = "120s";
         $data['builders'][$i]['shutdown_timeout'] = "1h";
-
-        // don't add new settings twice
-        $nary = array('setextradata', '{{.Name}}', 'GUI/SuppressMessages', 'all');
-        $found = false;
-        foreach ($data['builders'][$i]['vboxmanage'] as $manage) {
-            if (0 == count(array_diff($manage, $nary))) {
-                $found = true;
-                break;
-            }
-        }
-        if (!$found) {
-            array_push($data['builders'][$i]['vboxmanage'], $nary);
-        }
-
     }
 }
 file_put_contents($jfile, json_encode($data));
