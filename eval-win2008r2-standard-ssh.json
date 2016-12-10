@@ -86,7 +86,9 @@
           "1"
         ]
       ],
-      "vm_name": "eval-win2008r2-standard-ssh"
+      "vm_name": "eval-win2008r2-standard-ssh",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "disk_size": "{{user `disk_size`}}",

@@ -90,7 +90,9 @@
       "vm_name": "win8x64-pro",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
-      "winrm_username": "vagrant"
+      "winrm_username": "vagrant",
+      "post_shutdown_delay": "120s",
+      "shutdown_timeout": "1h"
     },
     {
       "communicator": "winrm",
