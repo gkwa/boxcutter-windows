@@ -90,9 +90,7 @@
           "1"
         ]
       ],
-      "vm_name": "eval-win7x86-enterprise-ssh",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "eval-win7x86-enterprise-ssh"
     },
     {
       "disk_size": "{{user `disk_size`}}",

@@ -88,9 +88,7 @@
           "1"
         ]
       ],
-      "vm_name": "win2008r2-standard-cygwin",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "win2008r2-standard-cygwin"
     },
     {
       "disk_size": "{{user `disk_size`}}",
