@@ -320,3 +320,4 @@
 [Sat, Dec 10, 2016 11:37:31 AM] fail 00h00m virtualbox/eval-win2012r2-datacenter
 [Sat, Dec 10, 2016 11:38:33 AM] fail 00h00m virtualbox/eval-win2012r2-standard
 [Sat, Dec 10, 2016 11:39:24 AM] fail 00h00m virtualbox/eval-win10x64-enterprise
+[Sat, Dec 10, 2016 11:40:09 AM] fail 00h00m virtualbox/eval-win10x86-enterprise
