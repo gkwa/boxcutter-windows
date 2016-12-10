@@ -91,17 +91,9 @@
           "{{.Name}}",
           "VBoxInternal/CPUM/CMPXCHG16B",
           "1"
-        ],
-        [
-          "setextradata",
-          "{{.Name}}",
-          "GUI/SuppressMessages",
-          "all"
         ]
       ],
-      "vm_name": "eval-win2012r2-standard-ssh",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "eval-win2012r2-standard-ssh"
     },
     {
       "disk_size": "{{user `disk_size`}}",
