@@ -95,6 +95,8 @@ fi
 trap "rm -f ${LOCKFILE}; exit" INT TERM EXIT
 echo $$ >${LOCKFILE}
 
+vboxmanage setextradata global GUI/SuppressMessages "all"
+
 main
 
 rm -f make_time.$$.txt
