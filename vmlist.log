@@ -315,3 +315,4 @@
 [Sat, Dec 10, 2016 11:33:25 AM] fail 00h26m virtualbox/eval-win2008r2-standard
 [Sat, Dec 10, 2016 11:34:20 AM] fail 00h00m virtualbox/eval-win7x64-enterprise
 [Sat, Dec 10, 2016 11:35:01 AM] fail 00h00m virtualbox/eval-win7x86-enterprise
+[Sat, Dec 10, 2016 11:35:49 AM] fail 00h00m virtualbox/eval-win81x64-enterprise
