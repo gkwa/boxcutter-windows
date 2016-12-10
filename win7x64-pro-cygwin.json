@@ -90,9 +90,7 @@
           "1"
         ]
       ],
-      "vm_name": "win7x64-pro-cygwin",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "win7x64-pro-cygwin"
     },
     {
       "disk_size": "{{user `disk_size`}}",

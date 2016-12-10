@@ -86,9 +86,7 @@
           "1"
         ]
       ],
-      "vm_name": "win8x86-pro-cygwin",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "win8x86-pro-cygwin"
     },
     {
       "disk_size": "{{user `disk_size`}}",

@@ -90,9 +90,7 @@
       "vm_name": "eval-win7x86-enterprise",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
-      "winrm_username": "vagrant",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "winrm_username": "vagrant"
     },
     {
       "communicator": "winrm",

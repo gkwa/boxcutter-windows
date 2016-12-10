@@ -91,9 +91,7 @@
           "1"
         ]
       ],
-      "vm_name": "win81x64-enterprise-ssh",
-      "post_shutdown_delay": "120s",
-      "shutdown_timeout": "1h"
+      "vm_name": "win81x64-enterprise-ssh"
     },
     {
       "disk_size": "{{user `disk_size`}}",
