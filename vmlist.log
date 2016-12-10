@@ -248,3 +248,4 @@
 [Sat Dec 10 09:44:34 PST 2016] fail 00h01m virtualbox/eval-win2012r2-standard
 [Sat Dec 10 09:45:38 PST 2016] fail 00h00m virtualbox/eval-win10x64-enterprise
 [Sat Dec 10 09:46:37 PST 2016] fail 00h00m virtualbox/eval-win10x86-enterprise
+[Sat Dec 10 09:48:09 PST 2016] fail 00h00m virtualbox/eval-win2008r2-standard
