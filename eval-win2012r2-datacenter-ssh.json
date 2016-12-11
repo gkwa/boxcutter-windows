@@ -94,7 +94,7 @@
         ]
       ],
       "vm_name": "eval-win2012r2-datacenter-ssh",
-      "post_shutdown_delay": "120s",
+      "post_shutdown_delay": "5m",
       "shutdown_timeout": "1h"
     },
     {
