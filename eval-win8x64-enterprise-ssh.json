@@ -89,7 +89,7 @@
         ]
       ],
       "vm_name": "eval-win8x64-enterprise-ssh",
-      "post_shutdown_delay": "5m",
+      "post_shutdown_delay": "1m",
       "shutdown_timeout": "1h"
     },
     {
