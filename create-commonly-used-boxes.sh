@@ -62,8 +62,7 @@ function main
 		if [ $ps -ne 0 ]
 		then
 			subject="$maketime fail $vm_wo_provider (packer)"
-			cat $makelog |
-				email --subject "$subject" ${email:-taylor}
+			cat $makelog | email --subject "$subject" ${email:-taylor}
 			echo [`date`] fail $maketime $vm >>vmlist.log
 			git add vmlist.log && git commit -m time && git push
 			clear_old_settings_file $makelog
