@@ -51,6 +51,7 @@ function main
 	create_todo
 	for vm in `cat todolist.txt|grep -v ^\#`
 	do
+		vboxmanage setextradata global GUI/SuppressMessages "all"
 		vm_wo_provider="${vm//virtualbox\//}"
 		clear_old_vms $vm_wo_provider
 		T="$(date +%s)"
@@ -93,8 +94,6 @@ fi
 # make sure the lockfile is removed when we exit and then claim it
 trap "rm -f ${LOCKFILE}; exit" INT TERM EXIT
 echo $$ >${LOCKFILE}
-
-vboxmanage setextradata global GUI/SuppressMessages "all"
 
 main
 
