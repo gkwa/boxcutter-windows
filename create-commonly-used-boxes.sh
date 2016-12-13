@@ -79,7 +79,7 @@ function main
 			email --blank-mail --subject "$subject" ${email:-taylor}
 			echo [`date`] pass $maketime $vm >>vmlist.log
 		fi
-#		test_delete_random
+		#		test_delete_random
 		create_todo
 		sleep 10
 	done
