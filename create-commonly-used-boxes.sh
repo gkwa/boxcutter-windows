@@ -52,6 +52,35 @@ function clear_old_settings_file
 	} | bash
 }
 
+function unregister_pre_existing_vm()
+{
+	vm_to_unregister="$1"
+
+	if [ -z $vm_to_unregister ]
+	then
+		echo '$vm_to_unregister needs value'
+		exit 1
+	fi
+
+	vboxmanage list vms |
+		sed -n 's,^"\(.*\)".*{\(.*\)},\1 \2,' |
+		while read vmname uuid
+		do
+			if [ $vmname == $vm_to_unregister ]
+			then
+				echo vboxmanage unregistervm $uuid --delete
+			fi
+		done
+}
+
+function kill_running_vms()
+{
+	# my workstation can't handle two windows vms running at once
+	# FIXME: this should depend remaining host resources
+	vboxmanage list runningvms |
+		sed -n	's,.*{\(.*\)}.*,vboxmanage controlvm \1 poweroff'
+}
+
 function main
 {
 	mkdir -p logs
@@ -61,6 +90,8 @@ function main
 		vboxmanage setextradata global GUI/SuppressMessages "all"
 		vm_wo_provider="${vm//virtualbox\//}"
 		clear_old_vms $vm_wo_provider
+		kill_running_vms | sh -x -
+		unregister_pre_existing_vm $vm_wo_provider | sh -x -
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
 		make PACKER_DEBUG=1 $vm 2>&1 | tee $makelog
