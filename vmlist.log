@@ -342,3 +342,6 @@
 [Mon, Dec 12, 2016 7:56:21 PM] fail 00h01m virtualbox/eval-win7x64-enterprise
 [Mon, Dec 12, 2016 7:56:26 PM] fail 00h00m virtualbox/eval-win10x64-enterprise
 [Mon, Dec 12, 2016 7:56:27 PM] fail 00h00m virtualbox/eval-win10x86-enterprise
+[Tue Dec 13 10:41:31 PST 2016] pass 00h38m virtualbox/eval-win2008r2-datacenter
+[Tue Dec 13 11:19:49 PST 2016] pass 00h38m virtualbox/eval-win2008r2-standard
+[Tue Dec 13 11:26:06 PST 2016] fail 00h05m virtualbox/eval-win7x64-enterprise
