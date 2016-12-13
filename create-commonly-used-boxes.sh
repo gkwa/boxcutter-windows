@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# run from windows task schedular will use cmd.exe find instead of
+# cygwin /bin/find otherwise
+PATH=/bin:$PATH
+
 function test_delete_random
 {
 	ls box/*/*.box | shuf | head -1 | xargs -I% -r mv % %.1
@@ -17,8 +21,11 @@ function clear_old_vms
 {
 	vm_wo_provider=$1
 
-	handle -nobanner $vm_wo_provider |
-		sed -n 's,.* pid: \([0-9]*\).*,\1,p' | xargs -r kill -9
+	if command -v handle >/dev/null 2>&1; then
+		handle -nobanner $vm_wo_provider |
+			sed -n 's,.* pid: \([0-9]*\).*,\1,p' | xargs -r kill -9
+	fi
+
 	vboxmanage list vms |
 		grep -E "<inaccessible>|$vm_wo_provider" |
 		sed -n 's/.*{\(.*\)}/\1/p' |
