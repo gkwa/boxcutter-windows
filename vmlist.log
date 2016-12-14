@@ -356,3 +356,4 @@
 [Tue Dec 13 14:04:07 PST 2016] pass 00h32m virtualbox/eval-win7x86-enterprise
 [Tue Dec 13 17:03:58 PST 2016] pass 00h48m virtualbox/eval-win7x64-enterprise
 [Tue Dec 13 17:04:56 PST 2016] fail 00h00m virtualbox/eval-win81x64-enterprise
+[Tue Dec 13 17:33:07 PST 2016] fail 00h27m virtualbox/eval-win81x86-enterprise
