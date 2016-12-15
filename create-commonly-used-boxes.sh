@@ -111,7 +111,7 @@ function main
 		clear_old_vms $vm_wo_provider
 		kill_running_vms | sh -x -
 		unregister_pre_existing_vm $vm_wo_provider | sh -x -
-		delete_old_settings_file
+		delete_old_settings_file $vm_wo_provider
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
 		vboxmanage setextradata $vm_wo_provider GUI/SuppressMessages "all"
