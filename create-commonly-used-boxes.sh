@@ -78,7 +78,7 @@ function kill_running_vms()
 	# my workstation can't handle two windows vms running at once
 	# FIXME: this should depend remaining host resources
 	vboxmanage list runningvms |
-		sed -n	's,.*{\(.*\)}.*,vboxmanage controlvm \1 poweroff'
+		sed -n	's,.*{\(.*\)}.*,vboxmanage controlvm \1 poweroff,'
 }
 
 function delete_old_settings_file()
