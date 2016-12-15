@@ -403,3 +403,4 @@
 [Thu Dec 15 05:57:40 PST 2016] fail 00h01m virtualbox/eval-win2012r2-standard
 [Thu Dec 15 05:58:56 PST 2016] fail 00h00m virtualbox/eval-win10x64-enterprise
 [Thu Dec 15 06:00:06 PST 2016] fail 00h00m virtualbox/eval-win10x86-enterprise
+[Thu Dec 15 06:03:46 PST 2016] fail 00h00m virtualbox/eval-win81x64-enterprise
