@@ -650,3 +650,4 @@
 [Thu Dec 15 12:49:00 PST 2016] fail 00h00m virtualbox/eval-win10x64-enterprise
 [Thu Dec 15 12:50:11 PST 2016] fail 00h00m virtualbox/eval-win10x86-enterprise
 [Thu Dec 15 12:53:45 PST 2016] fail 00h00m virtualbox/eval-win81x64-enterprise
+[Thu Dec 15 12:54:49 PST 2016] fail 00h00m virtualbox/eval-win81x86-enterprise
