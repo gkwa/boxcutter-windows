@@ -23,7 +23,7 @@ $jfile = $options["f"];
 $data = json_decode(file_get_contents($jfile), true);
 for ($i = 0; $i < count($data['builders']); $i++) {
     if ($data['builders'][$i]['type'] == 'virtualbox-iso') {
-        $data['builders'][$i]['post_shutdown_delay'] = "1m";
+        $data['builders'][$i]['post_shutdown_delay'] = "3m";
         $data['builders'][$i]['shutdown_timeout'] = "1h";
     }
 }
