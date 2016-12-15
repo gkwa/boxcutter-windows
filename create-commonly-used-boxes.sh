@@ -81,6 +81,26 @@ function kill_running_vms()
 		sed -n	's,.*{\(.*\)}.*,vboxmanage controlvm \1 poweroff'
 }
 
+function delete_old_settings_file()
+{
+	vm_wo_provider="$1"
+	
+	bf=$(vboxmanage list systemproperties |
+			 grep 'Default machine folder:' |
+			 sed -n 's/Default machine folder:[[:blank:]]*\(.*\)/\1/p')
+	sp=""
+	if [ ! -z $(echo $bf | grep '/') ]
+	then
+		sp="${bf}/${vm_wo_provider}/$vm_wo_provider.vbox"
+	else
+		sp="${bf}\\${vm_wo_provider}\\$vm_wo_provider.vbox"
+	fi
+	rm -f $sp
+}
+
+
+
+
 function main
 {
 	mkdir -p logs
@@ -91,6 +111,7 @@ function main
 		clear_old_vms $vm_wo_provider
 		kill_running_vms | sh -x -
 		unregister_pre_existing_vm $vm_wo_provider | sh -x -
+		delete_old_settings_file
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
 		vboxmanage setextradata $vm_wo_provider GUI/SuppressMessages "all"
