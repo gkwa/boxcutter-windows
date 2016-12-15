@@ -94,7 +94,7 @@
         ]
       ],
       "vm_name": "eval-win81x86-enterprise-ssh",
-      "post_shutdown_delay": "1m",
+      "post_shutdown_delay": "3m",
       "shutdown_timeout": "1h"
     },
     {
