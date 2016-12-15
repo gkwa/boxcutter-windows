@@ -103,7 +103,8 @@ function main
 			subject="$maketime fail $vm_wo_provider (packer)"
 			cat $makelog | email --subject "$subject" ${email:-taylor}
 			echo [`date`] fail $maketime $vm >>vmlist.log
-			git add vmlist.log && git commit -m time && git push
+			git add vmlist.log && git commit -m time &&
+				git pull --rebase && git push
 			clear_old_settings_file $makelog
 		else
 			subject="$maketime pass $vm_wo_provider (packer)"
