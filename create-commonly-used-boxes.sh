@@ -87,13 +87,13 @@ function main
 	create_todo
 	for vm in `cat todolist.txt|grep -v ^\#`
 	do
-		vboxmanage setextradata global GUI/SuppressMessages "all"
 		vm_wo_provider="${vm//virtualbox\//}"
 		clear_old_vms $vm_wo_provider
 		kill_running_vms | sh -x -
 		unregister_pre_existing_vm $vm_wo_provider | sh -x -
 		T="$(date +%s)"
 		makelog=logs/make.$vm_wo_provider.$(date +%m-%d-%A_%H_%M_%S).log
+		vboxmanage setextradata $vm_wo_provider GUI/SuppressMessages "all"
 		make PACKER_DEBUG=1 $vm 2>&1 | tee $makelog
 		ps=${PIPESTATUS[0]} #http://stackoverflow.com/a/1221870/1495086 
 		T="$(($(date +%s)-T))"
