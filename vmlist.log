@@ -667,3 +667,10 @@
 [Thu Dec 15 13:17:44 PST 2016] fail 00h01m virtualbox/eval-win2012r2-standard
 [Thu Dec 15 13:18:59 PST 2016] fail 00h00m virtualbox/eval-win10x64-enterprise
 [Thu Dec 15 13:20:12 PST 2016] fail 00h00m virtualbox/eval-win10x86-enterprise
+[Thu, Dec 15, 2016 2:37:53 PM] pass 00h52m virtualbox/eval-win81x64-enterprise
+[Thu, Dec 15, 2016 3:17:21 PM] pass 00h39m virtualbox/eval-win81x86-enterprise
+[Thu, Dec 15, 2016 3:56:05 PM] pass 00h38m virtualbox/eval-win2012r2-datacenter
+[Thu, Dec 15, 2016 4:35:03 PM] pass 00h38m virtualbox/eval-win2012r2-standard
+[Thu, Dec 15, 2016 5:40:29 PM] pass 01h05m virtualbox/eval-win10x64-enterprise
+[Thu, Dec 15, 2016 6:30:42 PM] pass 00h49m virtualbox/eval-win10x86-enterprise
+[Thu, Dec 15, 2016 7:45:49 PM] fail 00h32m virtualbox/eval-win2008r2-datacenter
