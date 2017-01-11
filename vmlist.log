@@ -677,3 +677,4 @@
 [Thu, Dec 15, 2016 8:14:56 PM] fail 00h28m virtualbox/eval-win2008r2-standard
 [Thu, Dec 15, 2016 8:53:44 PM] fail 00h38m virtualbox/eval-win7x64-enterprise
 [11 Jan 2017 08:09:58] fail 02h57m virtualbox/eval-win2008r2-datacenter
+[11 Jan 2017 10:58:29] fail 02h47m virtualbox/eval-win2008r2-standard
