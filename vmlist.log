@@ -681,3 +681,4 @@
 [11 Jan 2017 14:08:34] fail 03h09m virtualbox/eval-win7x64-enterprise
 [11 Jan 2017 17:02:44] fail 02h53m virtualbox/eval-win7x86-enterprise
 [11 Jan 2017 20:00:41] fail 02h57m virtualbox/eval-win81x64-enterprise
+[11 Jan 2017 22:57:24] fail 02h56m virtualbox/eval-win81x86-enterprise
