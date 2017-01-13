@@ -71,7 +71,7 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "2048"
+          "8048"
         ],
         [
           "modifyvm",
@@ -84,6 +84,9 @@
           "{{.Name}}",
           "--cpus",
           "2"
+        ],
+        [
+"modifyvm", "{{.Name}}", "--natpf1", "guestwinrm,tcp,127.0.0.1,5985,,5985"
         ],
         [
           "setextradata",
