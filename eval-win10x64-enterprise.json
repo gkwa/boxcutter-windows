@@ -86,6 +86,12 @@
           "2"
         ],
         [
+          "modifyvm",
+          "{{.Name}}",
+          "--natpf1",
+          "guestwinrm,tcp,127.0.0.1,5985,,5985"
+        ],
+        [
           "setextradata",
           "{{.Name}}",
           "VBoxInternal/CPUM/CMPXCHG16B",
