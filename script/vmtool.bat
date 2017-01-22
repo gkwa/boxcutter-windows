@@ -220,6 +220,8 @@ echo ==^> Installing Oracle certificate to keep install silent
 certutil -addstore -f "TrustedPublisher" a:\oracle-cert.cer
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
+@echo Pausing to allow debug, hit enter to continue
+timeout /t -1
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
 ver>nul
 goto :exit0
@@ -294,6 +296,4 @@ goto :exit0
 @goto :eof
 
 :_exit
-@echo Pausing to allow debug, hit enter to continue
-timeout /t -1
 @exit /b %_ERRORLEVEL%
