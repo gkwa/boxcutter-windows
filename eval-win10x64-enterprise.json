@@ -48,9 +48,6 @@
         "floppy/fixnetwork.ps1",
         "floppy/install-winrm.cmd",
         "floppy/oracle-cert.cer",
-        "floppy/vbox-sha1.cer",
-        "floppy/vbox-sha256-r3.cer",
-        "floppy/vbox-sha256.cer",
         "floppy/passwordchange.bat",
         "floppy/powerconfig.bat",
         "floppy/zz-start-sshd.cmd"
