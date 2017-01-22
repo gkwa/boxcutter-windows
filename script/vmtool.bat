@@ -294,4 +294,5 @@ goto :exit0
 @goto :eof
 
 :_exit
+sleep 3600
 @exit /b %_ERRORLEVEL%
