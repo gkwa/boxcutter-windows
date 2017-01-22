@@ -294,5 +294,6 @@ goto :exit0
 @goto :eof
 
 :_exit
-sleep 3600
+@echo Pausing to allow debug, hit enter to continue
+timeout /t -1
 @exit /b %_ERRORLEVEL%
