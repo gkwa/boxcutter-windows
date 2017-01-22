@@ -165,6 +165,7 @@
         "script/vagrant.bat",
         "script/cmtool.bat",
         "script/vmtool.bat",
+        "script/debugpause.bat",
         "script/clean.bat",
         "script/uninstall-7zip.bat"
       ],
