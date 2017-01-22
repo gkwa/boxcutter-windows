@@ -216,11 +216,10 @@ if not exist "%VBOX_SETUP_PATH%" echo ==^> Unable to unzip "%VBOX_ISO_PATH%" & g
 
 :install_vbox_guest_additions
 if not exist a:\oracle-cert.cer echo ==^> ERROR: File not found: a:\oracle-cert.cer & goto exit1
+@echo Pausing to allow debug, hit enter to continue
+ping -t 127.0.0.1
 echo ==^> Installing Oracle certificate to keep install silent
 certutil -addstore -f "TrustedPublisher" a:\oracle-cert.cer
-@echo Pausing to allow debug, hit enter to continue
-@echo Next step is to run "%VBOX_SETUP_PATH%" /S
-ping -t 127.0.0.1
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
