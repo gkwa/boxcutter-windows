@@ -220,7 +220,7 @@ echo ==^> Installing Oracle certificate to keep install silent
 certutil -addstore -f "TrustedPublisher" a:\oracle-cert.cer
 @echo Pausing to allow debug, hit enter to continue
 @echo Next step is to run "%VBOX_SETUP_PATH%" /S
-timeout /t -1
+ping -t 127.0.0.1
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
