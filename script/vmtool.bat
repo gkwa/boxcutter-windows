@@ -208,20 +208,20 @@ if not exist "%VBOX_ISO_PATH%" goto exit1
 call :install_sevenzip
 if errorlevel 1 goto exit1
 echo ==^> Extracting the VirtualBox Guest Additions installer
-7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%" cert
+7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: 7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
 ver>nul
 set VBOX_SETUP_PATH=%VBOX_ISO_DIR%\%VBOX_SETUP_EXE%
 if not exist "%VBOX_SETUP_PATH%" echo ==^> Unable to unzip "%VBOX_ISO_PATH%" & goto exit1
 
 :install_vbox_guest_additions
-if not exist "%VBOX_ISO_DIR%\vbox-sha1.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha1.cer" & goto exit1
-if not exist "%VBOX_ISO_DIR%\vbox-sha256.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha256.cer" & goto exit1
-if not exist "%VBOX_ISO_DIR%\vbox-sha256-r3.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha256-r3.cer" & goto exit1
+if not exist a:\vbox-sha1.cer echo ==^> ERROR: File not found: a:\vbox-sha1.cer & goto exit1
 echo ==^> Installing Oracle certificate to keep install silent
-certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha1.cer"
-certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256.cer"
-certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256-r3.cer"
+certutil -addstore -f "TrustedPublisher" a:\vbox-sha1.cer
+if not exist a:\vbox-sha256-r3.cer echo ==^> ERROR: File not found: a:\vbox-sha256-r3.cer & goto exit1
+certutil -addstore -f "TrustedPublisher" a:\vbox-sha256-r3.cer
+if not exist a:\vbox-sha256.cer echo ==^> ERROR: File not found: a:\vbox-sha256.cer & goto exit1
+certutil -addstore -f "TrustedPublisher" a:\vbox-sha256.cer
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
