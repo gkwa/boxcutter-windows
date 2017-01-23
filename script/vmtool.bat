@@ -218,6 +218,10 @@ if not exist "%VBOX_SETUP_PATH%" echo ==^> Unable to unzip "%VBOX_ISO_PATH%" & g
 if not exist a:\vbox-sha1.cer echo ==^> ERROR: File not found: a:\vbox-sha1.cer & goto exit1
 echo ==^> Installing Oracle certificate to keep install silent
 certutil -addstore -f "TrustedPublisher" a:\vbox-sha1.cer
+if not exist a:\vbox-sha256-r3.cer echo ==^> ERROR: File not found: a:\vbox-sha256-r3.cer & goto exit1
+certutil -addstore -f "TrustedPublisher" a:\vbox-sha256-r3.cer
+if not exist a:\vbox-sha256.cer echo ==^> ERROR: File not found: a:\vbox-sha256.cer & goto exit1
+certutil -addstore -f "TrustedPublisher" a:\vbox-sha256.cer
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
