@@ -208,8 +208,7 @@ if not exist "%VBOX_ISO_PATH%" goto exit1
 call :install_sevenzip
 if errorlevel 1 goto exit1
 echo ==^> Extracting the VirtualBox Guest Additions installer
-7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
-cmd /c start /d "%VBOX_ISO_DIR%"
+7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%" cert
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: 7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
 ver>nul
 set VBOX_SETUP_PATH=%VBOX_ISO_DIR%\%VBOX_SETUP_EXE%
