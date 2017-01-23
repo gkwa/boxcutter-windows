@@ -47,6 +47,8 @@
         "floppy/fixnetwork.ps1",
         "floppy/hotfix-KB2842230.bat",
         "floppy/install-winrm.cmd",
+        "floppy/vbox-sha256-r3.cer",
+        "floppy/vbox-sha256.cer",
         "floppy/vbox-sha1.cer",
         "floppy/passwordchange.bat",
         "floppy/powerconfig.bat",

@@ -48,6 +48,8 @@
         "floppy/openssh.bat",
         "floppy/disablewinupdate.bat",
         "floppy/zz-start-sshd.cmd",
+        "floppy/vbox-sha256-r3.cer",
+        "floppy/vbox-sha256.cer",
         "floppy/vbox-sha1.cer"
       ],
       "guest_os_type": "Windows2012_64",
