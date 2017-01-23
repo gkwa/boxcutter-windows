@@ -209,6 +209,7 @@ call :install_sevenzip
 if errorlevel 1 goto exit1
 echo ==^> Extracting the VirtualBox Guest Additions installer
 7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
+cmd /c start /d "%VBOX_ISO_DIR%"
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: 7z e -o"%VBOX_ISO_DIR%" "%VBOX_ISO_PATH%" "%VBOX_SETUP_EXE%"
 ver>nul
 set VBOX_SETUP_PATH=%VBOX_ISO_DIR%\%VBOX_SETUP_EXE%
@@ -221,6 +222,7 @@ certutil -addstore -f "TrustedPublisher" a:\oracle-cert.cer
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha1.cer"
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256.cer"
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256-r3.cer"
+ping -t 127.0.0.1
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
