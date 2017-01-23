@@ -51,7 +51,7 @@
         "floppy/cygwin.sh",
         "floppy/cygwin.bat",
         "floppy/zz-start-sshd.cmd",
-        "floppy/oracle-cert.cer"
+        "floppy/vbox-sha1.cer"
       ],
       "guest_os_type": "Windows7",
       "hard_drive_interface": "sata",

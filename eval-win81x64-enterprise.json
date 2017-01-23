@@ -47,7 +47,7 @@
         "floppy/eval-win81x64-enterprise/Autounattend.xml",
         "floppy/fixnetwork.ps1",
         "floppy/install-winrm.cmd",
-        "floppy/oracle-cert.cer",
+        "floppy/vbox-sha1.cer",
         "floppy/passwordchange.bat",
         "floppy/powerconfig.bat",
         "floppy/zz-start-sshd.cmd"

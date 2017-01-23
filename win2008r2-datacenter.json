@@ -45,7 +45,7 @@
         "floppy/disablewinupdate.bat",
         "floppy/fixnetwork.ps1",
         "floppy/install-winrm.cmd",
-        "floppy/oracle-cert.cer",
+        "floppy/vbox-sha1.cer",
         "floppy/passwordchange.bat",
         "floppy/powerconfig.bat",
         "floppy/win2008r2-datacenter/Autounattend.xml",

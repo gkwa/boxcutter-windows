@@ -48,7 +48,7 @@
         "floppy/fixnetwork.ps1",
         "floppy/install-winrm.cmd",
         "floppy/networkprompt.bat",
-        "floppy/oracle-cert.cer",
+        "floppy/vbox-sha1.cer",
         "floppy/passwordchange.bat",
         "floppy/powerconfig.bat",
         "floppy/upgrade-wua.bat",

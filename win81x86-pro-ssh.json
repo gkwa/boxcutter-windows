@@ -46,7 +46,7 @@
         "floppy/passwordchange.bat",
         "floppy/openssh.bat",
         "floppy/zz-start-sshd.cmd",
-        "floppy/oracle-cert.cer"
+        "floppy/vbox-sha1.cer"
       ],
       "guest_os_type": "Windows8",
       "hard_drive_interface": "sata",
