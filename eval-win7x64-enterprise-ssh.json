@@ -52,8 +52,7 @@
         "floppy/disablewinupdate.bat",
         "floppy/openssh.bat",
         "floppy/upgrade-wua.bat",
-        "floppy/zz-start-sshd.cmd",
-        "floppy/oracle-cert.cer"
+        "floppy/zz-start-sshd.cmd"
       ],
       "guest_os_type": "Windows7_64",
       "hard_drive_interface": "sata",

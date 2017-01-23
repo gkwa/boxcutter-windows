@@ -48,8 +48,7 @@
         "floppy/unzip.vbs",
         "floppy/hotfix-KB2842230.bat",
         "floppy/openssh.bat",
-        "floppy/zz-start-sshd.cmd",
-        "floppy/oracle-cert.cer"
+        "floppy/zz-start-sshd.cmd"
       ],
       "guest_os_type": "Windows2012_64",
       "hard_drive_interface": "sata",
