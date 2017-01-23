@@ -48,7 +48,8 @@
         "floppy/openssh.bat",
         "floppy/disablewinupdate.bat",
         "floppy/upgrade-wua.bat",
-        "floppy/zz-start-sshd.cmd"
+        "floppy/zz-start-sshd.cmd",
+        "floppy/oracle-cert.cer"
       ],
       "guest_os_type": "Windows2008_64",
       "hard_drive_interface": "sata",

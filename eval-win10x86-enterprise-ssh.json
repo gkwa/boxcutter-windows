@@ -47,7 +47,8 @@
         "floppy/passwordchange.bat",
         "floppy/disablewinupdate.bat",
         "floppy/openssh.bat",
-        "floppy/zz-start-sshd.cmd"
+        "floppy/zz-start-sshd.cmd",
+        "floppy/oracle-cert.cer"
       ],
       "guest_os_type": "Windows81",
       "hard_drive_interface": "sata",
