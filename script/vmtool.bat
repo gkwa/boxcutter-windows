@@ -221,7 +221,6 @@ certutil -addstore -f "TrustedPublisher" a:\oracle-cert.cer
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha1.cer"
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256.cer"
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256-r3.cer"
-ping -t 127.0.0.1
 echo ==^> Installing VirtualBox Guest Additions
 "%VBOX_SETUP_PATH%" /S
 @if errorlevel 1 echo ==^> WARNING: Error %ERRORLEVEL% was returned by: "%VBOX_SETUP_PATH%" /S
