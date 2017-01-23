@@ -215,6 +215,9 @@ set VBOX_SETUP_PATH=%VBOX_ISO_DIR%\%VBOX_SETUP_EXE%
 if not exist "%VBOX_SETUP_PATH%" echo ==^> Unable to unzip "%VBOX_ISO_PATH%" & goto exit1
 
 :install_vbox_guest_additions
+if not exist "%VBOX_ISO_DIR%\vbox-sha1.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha1.cer" & goto exit1
+if not exist "%VBOX_ISO_DIR%\vbox-sha256.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha256.cer" & goto exit1
+if not exist "%VBOX_ISO_DIR%\vbox-sha256-r3.cer" echo ==^> ERROR: File not found: "%VBOX_ISO_DIR%\vbox-sha256-r3.cer" & goto exit1
 echo ==^> Installing Oracle certificate to keep install silent
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha1.cer"
 certutil -addstore -f "TrustedPublisher" "%VBOX_ISO_DIR%\vbox-sha256.cer"
