@@ -63,12 +63,6 @@
         [
           "modifyvm",
           "{{.Name}}",
-          "--vcpenabled",
-          "on"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
           "--memory",
           "1536"
         ],
