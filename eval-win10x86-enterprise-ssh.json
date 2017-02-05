@@ -173,7 +173,7 @@
   "variables": {
     "cm": "chef",
     "cm_version": "",
-    "disk_size": "40960",
+    "disk_size": "204800",
     "headless": "false",
     "iso_checksum": "875b450d67e7176b8b3c72a80c60a0628bf1afac",
     "iso_url": "http://care.dlservice.microsoft.com/dl/download/C/3/9/C399EEA8-135D-4207-92C9-6AAB3259F6EF/10240.16384.150709-1700.TH1_CLIENTENTERPRISEEVAL_OEMRET_X86FRE_EN-US.ISO",
