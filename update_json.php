@@ -25,6 +25,7 @@ for ($i = 0; $i < count($data['builders']); $i++) {
     if ($data['builders'][$i]['type'] == 'virtualbox-iso') {
         $data['builders'][$i]['post_shutdown_delay'] = "3m";
         $data['builders'][$i]['shutdown_timeout'] = "1h";
+        $data['variables']['disk_size'] = "204800";
     }
 }
 file_put_contents($jfile, json_encode($data));
